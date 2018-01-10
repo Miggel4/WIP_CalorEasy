@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Dashboard.Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wip.fhdw.caloreasy.Dashboard.Dashboard" />
+        </activity>
     </application>
 
 </manifest>
