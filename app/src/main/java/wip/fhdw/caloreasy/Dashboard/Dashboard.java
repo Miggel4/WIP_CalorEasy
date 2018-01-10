@@ -15,7 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import wip.fhdw.caloreasy.R;
-import wip.fhdw.caloreasy.Settings.SettingsActivity;
+import wip.fhdw.caloreasy.Settings.Init;
 
 public class Dashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,7 +72,7 @@ public class Dashboard extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            startActivity(new Intent(this, SettingsActivity.class));
+            startActivity(new Intent(this, Init.class));
             return true;
         }
 

@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings.SettingsActivity"
+            android:name=".Settings.Init"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".Dashboard.Dashboard">
             <meta-data
