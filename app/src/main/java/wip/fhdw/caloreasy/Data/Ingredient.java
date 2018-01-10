@@ -15,6 +15,14 @@ public class Ingredient {
     private int calories;
     private int amount;
 
+    public Ingredient(int menuID, String name, String measurement, int calories, int amount) {
+        this.menuID = menuID;
+        this.name = name;
+        this.measurement = measurement;
+        this.calories = calories;
+        this.amount = amount;
+    }
+
     public int getMenuID() {
         return menuID;
     }

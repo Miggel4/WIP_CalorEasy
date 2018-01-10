@@ -20,6 +20,16 @@ public class Diary {
     private int calories;
     private String measurement;
 
+    public Diary(int index, Date date, Time time, String name, int amount, int calories, String measurement) {
+        this.index = index;
+        this.date = date;
+        this.time = time;
+        this.name = name;
+        this.amount = amount;
+        this.calories = calories;
+        this.measurement = measurement;
+    }
+
     public int getIndex() {
         return index;
     }

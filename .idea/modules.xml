@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WIP_CalorEasy.iml" filepath="$PROJECT_DIR$/WIP_CalorEasy.iml" />
       <module fileurl="file://C:\Users\Falk\AndroidStudioProjects\WIP_CalorEasy\WIP_CalorEasy.iml" filepath="C:\Users\Falk\AndroidStudioProjects\WIP_CalorEasy\WIP_CalorEasy.iml" />
+      <module fileurl="file://C:\Users\Falk\StudioProjects\WIP_CalorEasy\WIP_CalorEasy.iml" filepath="C:\Users\Falk\StudioProjects\WIP_CalorEasy\WIP_CalorEasy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Falk\StudioProjects\WIP_CalorEasy\app\app.iml" filepath="C:\Users\Falk\StudioProjects\WIP_CalorEasy\app\app.iml" />
       <module fileurl="file://C:\Users\Falk\AndroidStudioProjects\WIP_CalorEasy\app\app.iml" filepath="C:\Users\Falk\AndroidStudioProjects\WIP_CalorEasy\app\app.iml" />
     </modules>
   </component>

@@ -13,6 +13,11 @@ public class Menu {
     private String menuID;
     private String name;
 
+    public Menu(String menuID, String name) {
+        this.menuID = menuID;
+        this.name = name;
+    }
+
     public String getMenuID() {
         return menuID;
     }

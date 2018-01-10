@@ -13,6 +13,11 @@ public class Measurement {
     private String longform;
     private String shortform;
 
+    public Measurement(String longform, String shortform) {
+        this.longform = longform;
+        this.shortform = shortform;
+    }
+
     public String getLongform() {
         return longform;
     }

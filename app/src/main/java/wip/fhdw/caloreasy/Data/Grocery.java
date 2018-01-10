@@ -16,6 +16,13 @@ public class Grocery {
     private int baseAmount;
     private int baseCalories;
 
+    public Grocery(String name, String baseMeasurement, int baseAmount, int baseCalories) {
+        this.name = name;
+        this.baseMeasurement = baseMeasurement;
+        this.baseAmount = baseAmount;
+        this.baseCalories = baseCalories;
+    }
+
     public String getName() {
         return name;
     }

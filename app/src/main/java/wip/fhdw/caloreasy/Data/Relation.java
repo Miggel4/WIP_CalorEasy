@@ -16,6 +16,12 @@ public class Relation {
     private String measurement;
     private int amount;
 
+    public Relation(String grocery, String measurement, int amount) {
+        this.grocery = grocery;
+        this.measurement = measurement;
+        this.amount = amount;
+    }
+
     public String getGrocery() {
         return grocery;
     }
