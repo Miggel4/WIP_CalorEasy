@@ -52,6 +52,7 @@ public class NavDrawer {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
 
+                //Update Name in nav header according to shared Preference
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 String prefName = sharedPref.getString("name", "");
 
