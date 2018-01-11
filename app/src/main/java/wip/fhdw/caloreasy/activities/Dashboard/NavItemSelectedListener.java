@@ -6,6 +6,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
+import android.view.View;
 
 import wip.fhdw.caloreasy.R;
 import wip.fhdw.caloreasy.activities.Settings.Settings_Init;
@@ -14,22 +15,11 @@ import wip.fhdw.caloreasy.activities.Settings.Settings_Init;
  * Created by Simon on 11.01.2018.
  */
 
-public class NavDrawerListener
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-    private Dashboard_ApplicationLogic mDashboard_ApplicationLogic;
-    //private Dashboard_Init activity;
-
-    public NavDrawerListener(Dashboard_Init dashboard_init, Dashboard_ApplicationLogic applicationLogic){
-        activity = dashboard_init;
-        mDashboard_ApplicationLogic = applicationLogic;
-
-    }
-
+public class NavItemSelectedListener implements NavigationView.OnNavigationItemSelectedListener{
 
     private Dashboard_Init activity;
 
-    public NavDrawerListener(Dashboard_Init dashboard_init){
+    public NavItemSelectedListener(Dashboard_Init dashboard_init){
         activity = dashboard_init;
     }
 
