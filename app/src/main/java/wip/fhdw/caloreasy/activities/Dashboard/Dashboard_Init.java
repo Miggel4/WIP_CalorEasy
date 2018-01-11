@@ -2,7 +2,6 @@ package wip.fhdw.caloreasy.activities.Dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -16,23 +15,24 @@ public class Dashboard_Init extends AppCompatActivity {
 
     private Dashboard_Gui mGui;
     private Dashboard_ApplicationLogic mApplicationLogic;
+    private NavDrawer mNavDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initGUI();
-        initApplicationLogic();
+        initNavDrawer();
 
+        //initGUI();
+        //initApplicationLogic();
+        //initData();
     }
 
-    private void initGUI () {
-        mGui = new Dashboard_Gui(this);
-    }
+    private void initNavDrawer(){mNavDrawer = new NavDrawer(this);}
 
-    private void initApplicationLogic () {
-        mApplicationLogic = new Dashboard_ApplicationLogic(this, mGui);
-    }
+    //private void initGUI () {}
+    //private void initApplicationLogic () {}
+    //private void initData () {}
 
     @Override
     public void onBackPressed() {

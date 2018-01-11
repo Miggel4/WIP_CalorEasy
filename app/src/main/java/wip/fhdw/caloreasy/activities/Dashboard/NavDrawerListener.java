@@ -14,17 +14,25 @@ import wip.fhdw.caloreasy.activities.Settings.Settings_Init;
  * Created by Simon on 11.01.2018.
  */
 
-public class Dashboard_NavDrawerListener
+public class NavDrawerListener
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Dashboard_ApplicationLogic mDashboard_ApplicationLogic;
-    private Dashboard_Init activity;
+    //private Dashboard_Init activity;
 
-    public Dashboard_NavDrawerListener(Dashboard_Init dashboard_init, Dashboard_ApplicationLogic applicationLogic){
+    public NavDrawerListener(Dashboard_Init dashboard_init, Dashboard_ApplicationLogic applicationLogic){
         activity = dashboard_init;
         mDashboard_ApplicationLogic = applicationLogic;
 
     }
+
+
+    private Dashboard_Init activity;
+
+    public NavDrawerListener(Dashboard_Init dashboard_init){
+        activity = dashboard_init;
+    }
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
