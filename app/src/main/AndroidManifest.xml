@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Dashboard.Dashboard"
+            android:name=".activities.Dashboard.Dashboard_Init"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,12 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings.Init"
+            android:name=".activities.Settings.Settings_Init"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".Dashboard.Dashboard">
+            android:parentActivityName=".activities.Dashboard.Dashboard_Init">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="wip.fhdw.caloreasy.Dashboard.Dashboard" />
+                android:value=".activities.Dashboard.Dashboard_Init" />
         </activity>
     </application>
 

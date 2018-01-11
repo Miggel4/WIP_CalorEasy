@@ -1,4 +1,4 @@
-package wip.fhdw.caloreasy.Settings;
+package wip.fhdw.caloreasy.activities.Settings;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

@@ -1,10 +1,11 @@
-package wip.fhdw.caloreasy.Settings;
+package wip.fhdw.caloreasy.activities.Settings;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.util.Log;
+
+import wip.fhdw.caloreasy.R;
 
 /**
  * Created by Simon on 05.01.2018.
@@ -29,6 +30,8 @@ public class PreferenceChangeListener implements SharedPreferences.OnSharedPrefe
 
             // Set summary to be the user-description for the selected value
             connectionPref.setSummary(sharedPreferences.getString(key, ""));
+            // Update String Resource for e.g. nav drawer header
+            //R.string.nav_header_name;
 
         }else if(key.equals("calories_picker")){
             Log.v("PreferenceChange", "**** KEY calories_picker modified ****");

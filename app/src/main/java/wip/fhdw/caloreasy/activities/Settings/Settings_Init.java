@@ -1,30 +1,15 @@
-package wip.fhdw.caloreasy.Settings;
+package wip.fhdw.caloreasy.activities.Settings;
 
-import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.ActionBar;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.preference.RingtonePreference;
-import android.text.TextUtils;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 
-import wip.fhdw.caloreasy.Dashboard.Dashboard;
 import wip.fhdw.caloreasy.R;
-
-import java.util.List;
+import wip.fhdw.caloreasy.activities.Dashboard.Dashboard_Init;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -37,7 +22,7 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class Init extends AppCompatPreferenceActivity {
+public class Settings_Init extends AppCompatPreferenceActivity {
 
     SharedPreferences.OnSharedPreferenceChangeListener mPreferenceListener;
     SharedPreferences mPrefs;
@@ -96,7 +81,7 @@ public class Init extends AppCompatPreferenceActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 //use onBackPressed() OR finish();
-                startActivity(new Intent(this, Dashboard.class));
+                startActivity(new Intent(this, Dashboard_Init.class));
                 return true;
 
             default:

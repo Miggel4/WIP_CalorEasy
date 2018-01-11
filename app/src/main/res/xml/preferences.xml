@@ -12,7 +12,7 @@
         android:singleLine="true"
         android:title="@string/pref_title_name" />
 
-    <wip.fhdw.caloreasy.Settings.NumberPickerPreference
+    <wip.fhdw.caloreasy.activities.Settings.NumberPickerPreference
         android:key="calories_picker"
         android:title="@string/pref_title_calories_picker"
         android:defaultValue="@string/pref_default_calories_picker" />
