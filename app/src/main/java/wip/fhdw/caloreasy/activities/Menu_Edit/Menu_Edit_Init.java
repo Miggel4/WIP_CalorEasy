@@ -23,31 +23,6 @@ public class Menu_Edit_Init extends AppCompatActivity {
         initApplicationLogic();
         initData();
 
-
-/*
-        // Inflate the custom view and add click handlers for the buttons
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View actionBarButtons = inflater.inflate(R.layout.edit_custom_actionbar,
-                new LinearLayout(this), false);
-
-        View cancelActionView = actionBarButtons.findViewById(R.id.action_cancel);
-        //cancelActionView.setOnClickListener(mActionBarListener);
-
-        View doneActionView = actionBarButtons.findViewById(R.id.action_done);
-        //doneActionView.setOnClickListener(mActionBarListener);
-
-        // Retrieve an instance of the Activity's ActionBar
-        ActionBar actionBar = this.getSupportActionBar();
-
-        // Hide the icon, title and home/up button
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setDisplayShowTitleEnabled(false);
-
-        // Set the custom view and allow the bar to show it
-        actionBar.setCustomView(actionBarButtons);
-        actionBar.setDisplayShowCustomEnabled(true);
-*/
     }
 
     private void initGUI () {mGui = new Menu_Edit_Gui(this);}
