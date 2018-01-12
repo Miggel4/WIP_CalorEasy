@@ -11,11 +11,20 @@ import wip.fhdw.caloreasy.R;
 
 public class Menu_Edit_Init extends AppCompatActivity {
 
+    private Menu_Edit_Gui mGui;
+    private Menu_Edit_ApplicationLogic  mApplicationLogic;
+    private Menu_Edit_Data mData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_edit);
 
+        initGUI();
+        initApplicationLogic();
+        initData();
+
+
+/*
         // Inflate the custom view and add click handlers for the buttons
         LayoutInflater inflater = LayoutInflater.from(this);
         View actionBarButtons = inflater.inflate(R.layout.edit_custom_actionbar,
@@ -38,11 +47,16 @@ public class Menu_Edit_Init extends AppCompatActivity {
         // Set the custom view and allow the bar to show it
         actionBar.setCustomView(actionBarButtons);
         actionBar.setDisplayShowCustomEnabled(true);
-
+*/
     }
 
+    private void initGUI () {mGui = new Menu_Edit_Gui(this);}
 
+    private void initApplicationLogic () {mApplicationLogic = new Menu_Edit_ApplicationLogic(mGui,this);}
 
+    private void initData () {}
+
+    private void initClickListener () {}
 
 
 }
