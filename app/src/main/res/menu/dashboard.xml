@@ -14,5 +14,12 @@
         android:title="test"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_test2"
+        android:orderInCategory="100"
+        android:title="Kevinzinho"
+        app:showAsAction="never" />
+
+
 
 </menu>
