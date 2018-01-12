@@ -64,7 +64,7 @@ public class Dashboard_Init extends AppCompatActivity {
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, Settings_Init.class));
             return true;
-        }else if(id == R.id.action_test){
+        }else if(id == R.id.menu_edit){
             startActivity(new Intent(this, Menu_Edit_Init.class));
             return true;
         }else if(id == R.id.action_test2) {
