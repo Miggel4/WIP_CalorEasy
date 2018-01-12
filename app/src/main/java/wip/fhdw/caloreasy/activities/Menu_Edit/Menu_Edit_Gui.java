@@ -24,8 +24,8 @@ public class Menu_Edit_Gui {
         setCustomActionBar(activity);
     }
 
+    //setup custom app bar "Abbrechen" "Speichern"
     private void setCustomActionBar(AppCompatActivity activity) {
-
         // Inflate the custom view and add click handlers for the buttons
         LayoutInflater inflater = LayoutInflater.from(activity);
         View actionBarButtons = inflater.inflate(R.layout.edit_custom_actionbar,

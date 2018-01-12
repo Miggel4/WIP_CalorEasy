@@ -26,6 +26,7 @@ public class Menu_Edit_ApplicationLogic {
         Menu_Edit_ClickListener cl;
         cl = new Menu_Edit_ClickListener(this);
 
+        // initialize your Views that you want to listen to
         mGui.getmCancelActionView().setOnClickListener(cl);
         mGui.getmDoneActionView().setOnClickListener(cl);
     }

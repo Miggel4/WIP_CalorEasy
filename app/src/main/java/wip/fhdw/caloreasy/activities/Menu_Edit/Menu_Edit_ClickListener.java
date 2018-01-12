@@ -20,6 +20,7 @@ public class Menu_Edit_ClickListener implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+        //check which view was clicked
         switch ( view.getId() ) {
             case R.id.action_cancel:
                 Log.d("LOGTAG", "onViewActionCancelClicked ...");
