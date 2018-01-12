@@ -27,6 +27,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.Dashboard.Dashboard_Init" />
         </activity>
+        <activity android:name=".activities.Menu_Edit.Menu_Edit_Init"></activity>
     </application>
 
 </manifest>

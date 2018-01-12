@@ -80,7 +80,7 @@ public class Settings_Init extends AppCompatPreferenceActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                //use onBackPressed() OR finish();
+                //use onBackPr essed() OR finish();
                 startActivity(new Intent(this, Dashboard_Init.class));
                 return true;
 

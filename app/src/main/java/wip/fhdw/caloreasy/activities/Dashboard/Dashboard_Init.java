@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import wip.fhdw.caloreasy.R;
+import wip.fhdw.caloreasy.activities.Menu_Edit.Menu_Edit_Init;
 import wip.fhdw.caloreasy.activities.Settings.Settings_Init;
 
 public class Dashboard_Init extends AppCompatActivity {
@@ -61,6 +62,9 @@ public class Dashboard_Init extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, Settings_Init.class));
+            return true;
+        }else if(id == R.id.action_test){
+            startActivity(new Intent(this, Menu_Edit_Init.class));
             return true;
         }
 
