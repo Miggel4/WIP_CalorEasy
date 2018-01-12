@@ -8,8 +8,6 @@
 
 
 
-    <include layout="@layout/edit_custom_actionbar" />
-
 
 
 </android.support.constraint.ConstraintLayout>
