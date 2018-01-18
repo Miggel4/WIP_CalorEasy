@@ -37,6 +37,7 @@ public class Menu_Edit_Gui {
         ActionBar actionBar = activity.getSupportActionBar();
 
         // Hide the icon, title and home/up button
+        assert actionBar != null;
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(false);
         actionBar.setDisplayShowTitleEnabled(false);
