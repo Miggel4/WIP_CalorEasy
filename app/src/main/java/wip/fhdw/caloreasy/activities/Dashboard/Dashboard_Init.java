@@ -23,17 +23,18 @@ public class Dashboard_Init extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initNavDrawer();
+        //initNavDrawer();
 
-        //initGUI();
-        //initApplicationLogic();
+        initGUI();
+        initApplicationLogic();
         //initData();
     }
 
     private void initNavDrawer(){mNavDrawer = new NavDrawer(this);}
 
-    //private void initGUI () {}
-    //private void initApplicationLogic () {}
+    private void initGUI () {mGui = new Dashboard_Gui(this);}
+
+    private void initApplicationLogic () {mApplicationLogic = new Dashboard_ApplicationLogic(mGui,this);}
     //private void initData () {}
 
     @Override

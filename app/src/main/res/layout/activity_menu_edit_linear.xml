@@ -15,6 +15,7 @@
         android:paddingRight="16dp"
         app:layout_constraintStart_toStartOf="parent">
 
+
         <!--set menu name -->
         <LinearLayout
             android:layout_width="match_parent"

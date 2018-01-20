@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import wip.fhdw.caloreasy.R;
 
@@ -21,6 +22,7 @@ public class Menu_Edit_Gui {
         activity.setContentView(R.layout.activity_menu_edit);
 
         setCustomActionBar(activity);
+        //setListViewFooter(activity);
     }
 
     //setup custom app bar "Abbrechen" "Speichern"
@@ -46,6 +48,15 @@ public class Menu_Edit_Gui {
         actionBar.setCustomView(actionBarButtons);
         actionBar.setDisplayShowCustomEnabled(true);
     }
+
+    // setup "add" footer in listview
+    /*public void setListViewFooter(AppCompatActivity activity) {
+        TextView footer = (TextView) activity.findViewById(R.id.add_custom_listfooter);
+        if ( footer != null ) {
+            getListView().addFooterView(footer);
+        }
+    }*/
+
 
     public View getmCancelActionView() {
         return mCancelActionView;
