@@ -17,7 +17,6 @@ public class Dashboard_Init extends AppCompatActivity {
 
     private Dashboard_Gui mGui;
     private Dashboard_ApplicationLogic mApplicationLogic;
-    private NavDrawer mNavDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class Dashboard_Init extends AppCompatActivity {
         //initData();
     }
 
-    private void initNavDrawer(){mNavDrawer = new NavDrawer(this);}
 
     private void initGUI () {mGui = new Dashboard_Gui(this);}
 
