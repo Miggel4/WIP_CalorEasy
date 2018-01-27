@@ -1,9 +1,9 @@
 package wip.fhdw.caloreasy.activities.Dashboard;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -21,9 +21,9 @@ public class Dashboard_Init extends AppCompatActivity {
 
     private Dashboard_Gui mGui;
     private Dashboard_ApplicationLogic mApplicationLogic;
-    private NavDrawer mNavDrawer;
+    // private NavDrawer mNavDrawer;
     private FragmentPagerAdapter adapterViewPager;
-    private Dashboard_ClickListener mClickListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +38,14 @@ public class Dashboard_Init extends AppCompatActivity {
         ViewPager vpPager = (ViewPager) findViewById(R.id.pager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
-
-        // initClickListener(vpPager);
     }
 
-    private void initNavDrawer (){mNavDrawer = new NavDrawer(this);}
+    // private void initNavDrawer(){mNavDrawer = new NavDrawer(this);}
 
     private void initGUI () {mGui = new Dashboard_Gui(this);}
 
     private void initApplicationLogic () {mApplicationLogic = new Dashboard_ApplicationLogic(mGui,this);}
-
     //private void initData () {}
-
-    // private void initClickListener (ViewPager vpPager) {mClickListener = new Dashboard_ClickListener(mGui, this, vpPager);}
 
     @Override
     public void onBackPressed() {
@@ -108,12 +103,12 @@ public class Dashboard_Init extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
-                case 0: // Fragment # 0 - This will show OverviewFragment
-                    return OverviewFragment.newInstance(0, "Overview");
-                case 1: // Fragment # 1 - This will show HistoryFragment
-                    return HistoryFragment.newInstance(1, "History");
-                case 2: // Fragment # 2 - This will show TodayFragment
-                    return TodayFragment.newInstance(2, "Today");
+                case 0: // Fragment # 0 - This will show FirstFragment
+                    return OverviewFragment.newInstance(0, "Page # 1");
+                case 1: // Fragment # 0 - This will show FirstFragment different title
+                    return HistoryFragment.newInstance(1, "Page # 2");
+                case 2: // Fragment # 1 - This will show SecondFragment
+                    return TodayFragment.newInstance(2, "Page # 3");
                 default:
                     return null;
             }
