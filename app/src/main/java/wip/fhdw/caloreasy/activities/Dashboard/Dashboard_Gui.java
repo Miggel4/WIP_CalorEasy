@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import me.relex.circleindicator.CircleIndicator;
 import wip.fhdw.caloreasy.R;
 
 /**
@@ -38,8 +39,10 @@ public class Dashboard_Gui {
         mActivity.setSupportActionBar(mToolbar);
 
         ViewPager vpPager = (ViewPager) mActivity.findViewById(R.id.pager);
+        CircleIndicator ciIndicator = (CircleIndicator) mActivity.findViewById(R.id.indicator);
         mAdapterViewPager = new MyPagerAdapter(mActivity.getSupportFragmentManager());
         vpPager.setAdapter(mAdapterViewPager);
+        ciIndicator.setViewPager(vpPager);
 
     }
 
