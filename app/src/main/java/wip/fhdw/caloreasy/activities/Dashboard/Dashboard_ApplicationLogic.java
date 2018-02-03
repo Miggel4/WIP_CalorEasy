@@ -14,10 +14,10 @@ import wip.fhdw.caloreasy.R;
 
 public class Dashboard_ApplicationLogic {
 
-    Dashboard_Gui mGui;
     Dashboard_Init mActivity;
+    Dashboard_Gui mGui;
 
-    public Dashboard_ApplicationLogic(Dashboard_Gui gui, Dashboard_Init activity){
+    public Dashboard_ApplicationLogic(Dashboard_Gui gui, Dashboard_Init activity) {
 
         mActivity = activity;
         mGui = gui;
@@ -26,10 +26,8 @@ public class Dashboard_ApplicationLogic {
 
     }
 
-
-
-
     private void init_NavDrawerListener(){
+
         NavItemSelectedListener navItemSelectedListener = new NavItemSelectedListener(mActivity);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,13 +45,12 @@ public class Dashboard_ApplicationLogic {
                 tw.setText(prefName);
             }
 
-
         };
 
         mGui.getmDrawer().addDrawerListener(toggle);
         toggle.syncState();
         mGui.getmNavigationView().setNavigationItemSelectedListener(navItemSelectedListener);
-    }
 
+    }
 
 }
