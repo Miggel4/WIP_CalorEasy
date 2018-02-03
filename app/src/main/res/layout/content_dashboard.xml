@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activities.Dashboard.Dashboard_Init"
     tools:showIn="@layout/app_bar_dashboard">
@@ -13,15 +14,17 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_width="match_parent">
 
     </android.support.v4.view.ViewPager>
 
     <me.relex.circleindicator.CircleIndicator
         android:id="@+id/indicator"
-        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
         android:layout_height="48dp"
+        android:layout_width="match_parent"
         app:ci_drawable="@color/colorAccent"
         app:ci_drawable_unselected="@color/colorPrimary"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
