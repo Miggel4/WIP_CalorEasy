@@ -2,6 +2,7 @@ package wip.fhdw.caloreasy.Data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by Falk on 10.01.2018.
@@ -9,20 +10,21 @@ import android.arch.persistence.room.PrimaryKey;
 
 @Entity
 public class Menu {
-    @PrimaryKey
+    @PrimaryKey @NonNull
     private String menuID;
     private String name;
 
-    public Menu(String menuID, String name) {
+    public Menu(@NonNull String menuID, String name) {
         this.menuID = menuID;
         this.name = name;
     }
 
+    @NonNull
     public String getMenuID() {
         return menuID;
     }
 
-    public void setMenuID(String menuID) {
+    public void setMenuID(@NonNull String menuID) {
         this.menuID = menuID;
     }
 

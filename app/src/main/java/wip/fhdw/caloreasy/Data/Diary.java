@@ -2,6 +2,7 @@ package wip.fhdw.caloreasy.Data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 import java.sql.Time;
 import java.util.Date;
@@ -13,14 +14,14 @@ import java.util.Date;
 public class Diary {
     @PrimaryKey
     private int index;
-    private Date date;
-    private Time time;
+    private String date;
+    private String time;
     private String name;
     private int amount;
     private int calories;
     private String measurement;
 
-    public Diary(int index, Date date, Time time, String name, int amount, int calories, String measurement) {
+    public Diary(int index, String date, String time, String name, int amount, int calories, String measurement) {
         this.index = index;
         this.date = date;
         this.time = time;
@@ -38,19 +39,19 @@ public class Diary {
         this.index = index;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

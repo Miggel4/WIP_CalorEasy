@@ -16,7 +16,7 @@ public interface RelationDAO {
     List<Relation> getAll();
 
     @Query("SELECT * FROM Relation WHERE grocery=:grocery AND measurement=:measurement")
-    Relation getByKeys(String grocery, Measurement measurement);
+    Relation getByKeys(String grocery, String measurement);
 
     @Insert
     void addRelation(Relation relation);

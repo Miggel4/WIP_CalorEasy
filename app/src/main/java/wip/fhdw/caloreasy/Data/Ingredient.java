@@ -3,6 +3,7 @@ package wip.fhdw.caloreasy.Data;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by Falk on 10.01.2018.
@@ -10,12 +11,13 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(primaryKeys = {"menuID","name"}, foreignKeys = @ForeignKey(entity = Menu.class, parentColumns = "menuID", childColumns = "menuID"))
 public class Ingredient {
     private int menuID;
+    @NonNull
     private String name;
     private String measurement;
     private int calories;
     private int amount;
 
-    public Ingredient(int menuID, String name, String measurement, int calories, int amount) {
+    public Ingredient(int menuID, @NonNull String name, String measurement, int calories, int amount) {
         this.menuID = menuID;
         this.name = name;
         this.measurement = measurement;
@@ -31,11 +33,12 @@ public class Ingredient {
         this.menuID = menuID;
     }
 
+    @NonNull
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@NonNull String name) {
         this.name = name;
     }
 

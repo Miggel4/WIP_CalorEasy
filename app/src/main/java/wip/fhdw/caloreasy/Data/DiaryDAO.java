@@ -17,7 +17,7 @@ public interface DiaryDAO {
     List<Diary> getAll();
 
     @Query("SELECT * FROM Diary WHERE date BETWEEN :minDate AND :maxDate")
-    List<Diary> getByTimespan(Date minDate, Date maxDate);
+    List<Diary> getByTimespan(String minDate, String maxDate);
 
     @Insert
     void addDiaryEntry(Diary diary);
