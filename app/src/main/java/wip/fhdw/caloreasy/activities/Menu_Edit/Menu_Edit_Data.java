@@ -6,7 +6,7 @@ package wip.fhdw.caloreasy.activities.Menu_Edit;
 
 public class Menu_Edit_Data {
 
-    private int d;
+    private String mName;
 
 
 }
