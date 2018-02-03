@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/add_custom_listfooter_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_action_add" />
@@ -13,5 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="add item" />
+
 
 </LinearLayout>

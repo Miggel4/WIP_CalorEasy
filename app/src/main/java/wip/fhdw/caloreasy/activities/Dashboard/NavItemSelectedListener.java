@@ -31,7 +31,9 @@ public class NavItemSelectedListener implements NavigationView.OnNavigationItemS
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_groceries) {
+        if (id == R.id.nav_dashboard) {
+            activity.startActivity(new Intent(activity, Dashboard_Init.class));
+        } else if (id == R.id.nav_groceries) {
             // Handle the action
         } else if (id == R.id.nav_menus) {
 
@@ -42,6 +44,7 @@ public class NavItemSelectedListener implements NavigationView.OnNavigationItemS
         } else if (id == R.id.nav_settings) {
             activity.startActivity(new Intent(activity, Settings_Init.class));
         }
+
 
         DrawerLayout drawer = (DrawerLayout) activity.findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

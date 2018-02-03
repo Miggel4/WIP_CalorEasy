@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import wip.fhdw.caloreasy.R;
@@ -17,12 +18,15 @@ public class Menu_Edit_Gui {
 
     private View mCancelActionView;
     private View mDoneActionView;
+    private ListView mListView;
 
     public Menu_Edit_Gui(Menu_Edit_Init activity) {
         activity.setContentView(R.layout.activity_menu_edit);
 
+        mListView = (ListView) activity.findViewById(R.id.menu_edit_list_ingredients);
+
         setCustomActionBar(activity);
-        //setListViewFooter(activity);
+        setListViewFooter(activity);
     }
 
     //setup custom app bar "Abbrechen" "Speichern"
@@ -49,14 +53,19 @@ public class Menu_Edit_Gui {
         actionBar.setDisplayShowCustomEnabled(true);
     }
 
-    // setup "add" footer in listview
-    /*public void setListViewFooter(AppCompatActivity activity) {
-        TextView footer = (TextView) activity.findViewById(R.id.add_custom_listfooter);
-        if ( footer != null ) {
-            getListView().addFooterView(footer);
-        }
-    }*/
 
+    // setup "add" footer in listview
+    public void setListViewFooter(AppCompatActivity activity) {
+        TextView footer = (TextView) activity.findViewById(R.id.add_custom_listfooter_plus);
+        if ( footer != null ) {
+            mListView.addFooterView(footer);
+        }
+    }
+
+
+    public ListView getmListView() {
+        return mListView;
+    }
 
     public View getmCancelActionView() {
         return mCancelActionView;
