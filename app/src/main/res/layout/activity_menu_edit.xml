@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Name:"
         app:layout_constraintBottom_toBottomOf="@+id/menu_edit_editText_name"
         app:layout_constraintEnd_toStartOf="@+id/menu_edit_editText_name" />
