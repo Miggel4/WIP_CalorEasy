@@ -2,11 +2,7 @@ package wip.fhdw.caloreasy.activities.Dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -22,56 +18,58 @@ public class Dashboard_Init extends AppCompatActivity {
     private Dashboard_Gui mGui;
     private Dashboard_ApplicationLogic mApplicationLogic;
     // private NavDrawer mNavDrawer;
-    private FragmentPagerAdapter adapterViewPager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //initNavDrawer();
-
-        initGUI();
         initApplicationLogic();
         //initData();
+        initGUI();
 
-        ViewPager vpPager = (ViewPager) findViewById(R.id.pager);
-        adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
-        vpPager.setAdapter(adapterViewPager);
+        //initNavDrawer();
+
     }
 
-    // private void initNavDrawer(){mNavDrawer = new NavDrawer(this);}
+    private void initApplicationLogic () { mApplicationLogic = new Dashboard_ApplicationLogic(mGui,this); }
 
-    private void initGUI () {mGui = new Dashboard_Gui(this);}
+    private void initGUI () { mGui = new Dashboard_Gui(this); }
 
-    private void initApplicationLogic () {mApplicationLogic = new Dashboard_ApplicationLogic(mGui,this);}
-    //private void initData () {}
+    // private void initData () {}
+
+    // private void initNavDrawer(){ mNavDrawer = new NavDrawer(this); }
 
     @Override
     public void onBackPressed() {
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.dashboard, menu);
         return true;
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, Settings_Init.class));
             return true;
@@ -84,41 +82,6 @@ public class Dashboard_Init extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 3;
-
-        public MyPagerAdapter(FragmentManager fragmentManager) {
-            super(fragmentManager);
-        }
-
-        // Returns total number of pages
-        @Override
-        public int getCount() {
-            return NUM_ITEMS;
-        }
-
-        // Returns the fragment to display for that page
-        @Override
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0: // Fragment # 0 - This will show FirstFragment
-                    return OverviewFragment.newInstance(0, "Page # 1");
-                case 1: // Fragment # 0 - This will show FirstFragment different title
-                    return HistoryFragment.newInstance(1, "Page # 2");
-                case 2: // Fragment # 1 - This will show SecondFragment
-                    return TodayFragment.newInstance(2, "Page # 3");
-                default:
-                    return null;
-            }
-        }
-
-        // Returns the page title for the top indicator
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return "Page " + position;
-        }
 
     }
 
