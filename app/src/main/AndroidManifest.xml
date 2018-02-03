@@ -28,7 +28,8 @@
                 android:value=".activities.Dashboard.Dashboard_Init" />
         </activity>
         <activity android:name=".activities.Menu_Edit.Menu_Edit_Init" />
-        <activity android:name=".activities.Menu_Qty_Set.Menu_Qty_Set_Init"></activity>
+        <activity android:name=".activities.Menu_Qty_Set.Menu_Qty_Set_Init" />
+        <activity android:name=".activities.Menu_View.Menu_View_Init"></activity>
     </application>
 
 </manifest>
