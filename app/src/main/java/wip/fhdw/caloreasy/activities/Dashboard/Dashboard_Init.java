@@ -17,17 +17,14 @@ public class Dashboard_Init extends AppCompatActivity {
 
     private Dashboard_Gui mGui;
     private Dashboard_ApplicationLogic mApplicationLogic;
-    // private NavDrawer mNavDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initGUI();
         initApplicationLogic();
         //initData();
-        initGUI();
-
-        //initNavDrawer();
 
     }
 
@@ -36,8 +33,6 @@ public class Dashboard_Init extends AppCompatActivity {
     private void initGUI () { mGui = new Dashboard_Gui(this); }
 
     // private void initData () {}
-
-    // private void initNavDrawer(){ mNavDrawer = new NavDrawer(this); }
 
     @Override
     public void onBackPressed() {
@@ -73,10 +68,10 @@ public class Dashboard_Init extends AppCompatActivity {
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, Settings_Init.class));
             return true;
-        }else if(id == R.id.menu_edit){
+        } else if(id == R.id.menu_edit){
             startActivity(new Intent(this, Menu_Edit_Init.class));
             return true;
-        }else if(id == R.id.action_test2) {
+        } else if(id == R.id.action_test2) {
             startActivity(new Intent(this, Menu_Qty_Set_Init.class));
             return true;
         }
