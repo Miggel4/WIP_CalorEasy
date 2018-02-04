@@ -29,7 +29,11 @@
         </activity>
         <activity android:name=".activities.Menu_Edit.Menu_Edit_Init" />
         <activity android:name=".activities.Menu_Qty_Set.Menu_Qty_Set_Init" />
-        <activity android:name=".activities.Menu_View.Menu_View_Init"></activity>
+        <activity android:name=".activities.Menu_View.Menu_View_Init" />
+        <activity
+            android:name=".activities.Grocery_View.Grocery_View_Init"
+            android:label="@string/title_activity_grocery__view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
