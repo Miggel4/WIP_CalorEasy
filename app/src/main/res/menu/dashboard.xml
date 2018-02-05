@@ -6,4 +6,25 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/menu_edit"
+        android:orderInCategory="100"
+        android:title="menu_edit"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_test2"
+        android:orderInCategory="100"
+        android:title="Menu Qty Set"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_test3"
+        android:orderInCategory="100"
+        android:title="Menu View"
+        app:showAsAction="never" />
+
 </menu>

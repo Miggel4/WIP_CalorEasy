@@ -5,5 +5,5 @@ package wip.fhdw.caloreasy.activities.Dashboard;
  */
 
 public class Dashboard_ClickListener {
-    //viel Spaß rbn :)
+    // tbd
 }

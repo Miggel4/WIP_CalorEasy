@@ -16,4 +16,5 @@
     <string name="pref_default_calories_picker">2000</string>
 
     <string name="nav_header_name">Max Mustermann</string>
+    <string name="title_activity_grocery__view">Grocery_View</string>
 </resources>
