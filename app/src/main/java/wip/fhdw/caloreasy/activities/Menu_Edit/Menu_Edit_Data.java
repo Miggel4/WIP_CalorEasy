@@ -21,13 +21,13 @@ public class Menu_Edit_Data {
     public Menu_Edit_Data(Bundle savedInstanceState, Menu_Edit_Init init){
         mActivity = init;
         mIngredients = new ArrayList<Ingredient>();
-/*
+
         if ( savedInstanceState == null ) {
             readIntentParametersOrSetDefaultValues(mActivity.getIntent());
         }
         else { // restore last state
             restoreDataFromBundle(savedInstanceState);
-        }*/
+        }
 
     }
 
@@ -61,5 +61,12 @@ public class Menu_Edit_Data {
 
     public ArrayList<Ingredient> getmIngredients(){
         return this.mIngredients;
+    }
+
+    public void addValueToList(String grocery, String unit, int quantity) {
+        Log.d("LOGTAG", "addValueToList ...");
+
+        Ingredient ingredient = new Ingredient(grocery,unit,quantity);
+        mIngredients.add(ingredient);
     }
 }

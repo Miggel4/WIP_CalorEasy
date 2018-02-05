@@ -1,9 +1,10 @@
-package wip.fhdw.caloreasy.activities.Data;
+package wip.fhdw.caloreasy.data;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+import android.util.Log;
 
 /**
  * Created by Falk on 10.01.2018.

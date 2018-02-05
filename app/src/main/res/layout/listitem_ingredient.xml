@@ -9,20 +9,21 @@
         android:id="@+id/list_item_ingredient_quantity"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:includeFontPadding="false"
-        android:paddingRight="3dp"
+        android:padding="3dp"
         android:text="999" />
 
     <TextView
         android:id="@+id/list_item_ingredient_unit"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:paddingRight="3dp"
+        android:padding="3dp"
         android:text="g" />
 
     <TextView
         android:id="@+id/list_item_ingredient_grocery"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:padding="3dp"
         android:text="Banane" />
+
 </LinearLayout>

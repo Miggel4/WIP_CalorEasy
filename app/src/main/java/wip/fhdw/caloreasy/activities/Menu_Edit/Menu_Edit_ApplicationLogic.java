@@ -25,8 +25,8 @@ public class Menu_Edit_ApplicationLogic {
         initGui();
         initClickListener();
 
-        Ingredient in = new Ingredient("Öl","g", 3);
-        mData.addValueToList(in);
+        mData.addValueToList("Öl","g", 3);
+        mData.addValueToList("Butter","kg", 2);
 
     }
 

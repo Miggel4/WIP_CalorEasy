@@ -1,4 +1,4 @@
-package wip.fhdw.caloreasy.activities.Data;
+package wip.fhdw.caloreasy.data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;

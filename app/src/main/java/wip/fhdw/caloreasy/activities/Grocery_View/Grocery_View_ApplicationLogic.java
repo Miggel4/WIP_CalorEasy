@@ -8,7 +8,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import wip.fhdw.caloreasy.R;
-import wip.fhdw.caloreasy.activities.Data.CaloreasyDatabase;
+import wip.fhdw.caloreasy.data.CaloreasyDatabase;
 
 
 /**
@@ -26,7 +26,8 @@ public class Grocery_View_ApplicationLogic {
         mGUI = gui;
         mActivity = activity;
         lv = (ListView) activity.findViewById(R.id.groceriesLV);
-        CaloreasyDatabase db = CaloreasyDatabase.getInstance(activity.getApplicationContext());
+        Log.d("test:","test.");
+        CaloreasyDatabase db = CaloreasyDatabase.getInstance(mActivity);
         Log.d("Datenbank:","Datenbank Instanz erhalten.");
         Cursor cursor = db.groceryDAO().getAll();
         Log.d("Datenbank:","Query ausgeführt.");

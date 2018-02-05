@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ingredients_bearbeiten"
+        android:orderInCategory="100"
+        android:title="Bearbeiten"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ingredients_loeschen"
+        android:orderInCategory="100"
+        android:title="Löschen"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ingredients_dublizieren"
+        android:orderInCategory="100"
+        android:title="Dublizieren"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ingredients_anzeigen"
+        android:orderInCategory="100"
+        android:title="Anzeigen"
+        app:showAsAction="never" />
+</menu>

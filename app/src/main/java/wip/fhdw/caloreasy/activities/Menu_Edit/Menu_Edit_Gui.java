@@ -2,7 +2,9 @@ package wip.fhdw.caloreasy.activities.Menu_Edit;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -24,6 +26,7 @@ public class Menu_Edit_Gui {
         activity.setContentView(R.layout.activity_menu_edit);
 
         mListView = (ListView) activity.findViewById(R.id.menu_edit_list_ingredients);
+        activity.registerForContextMenu(mListView);
 
         setCustomActionBar(activity);
         //setListViewFooter(activity);
@@ -55,12 +58,12 @@ public class Menu_Edit_Gui {
 
 
     // setup "add" footer in listview
-    public void setListViewFooter(AppCompatActivity activity) {
+    /*public void setListViewFooter(AppCompatActivity activity) {
         TextView footer = (TextView) activity.findViewById(R.id.add_custom_listfooter_plus);
         if ( footer != null ) {
             mListView.addFooterView(footer);
         }
-    }
+    }*/
 
 
     public ListView getmListView() {
