@@ -1,19 +1,16 @@
-package wip.fhdw.caloreasy.Data;
+package wip.fhdw.caloreasy.activities.Data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
-
-import java.sql.Time;
-import java.util.Date;
 
 /**
  * Created by Falk on 10.01.2018.
  */
 @Entity
 public class Diary {
-    @PrimaryKey
-    private int index;
+    @PrimaryKey @NonNull
+    private String index;
     private String date;
     private String time;
     private String name;
@@ -21,7 +18,7 @@ public class Diary {
     private int calories;
     private String measurement;
 
-    public Diary(int index, String date, String time, String name, int amount, int calories, String measurement) {
+    public Diary(String index, String date, String time, String name, int amount, int calories, String measurement) {
         this.index = index;
         this.date = date;
         this.time = time;
@@ -31,11 +28,11 @@ public class Diary {
         this.measurement = measurement;
     }
 
-    public int getIndex() {
+    public String getIndex() {
         return index;
     }
 
-    public void setIndex(int index) {
+    public void setIndex(String index) {
         this.index = index;
     }
 

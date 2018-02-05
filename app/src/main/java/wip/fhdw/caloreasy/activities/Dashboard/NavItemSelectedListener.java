@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import wip.fhdw.caloreasy.R;
+import wip.fhdw.caloreasy.activities.Grocery_View.Grocery_View_Init;
 import wip.fhdw.caloreasy.activities.Settings.Settings_Init;
 
 /**
@@ -33,9 +34,9 @@ public class NavItemSelectedListener implements NavigationView.OnNavigationItemS
         if (id == R.id.nav_dashboard) {
             activity.startActivity(new Intent(activity, Dashboard_Init.class));
         } else if (id == R.id.nav_groceries) {
-            // Handle the action
+            activity.startActivity(new Intent(activity, Grocery_View_Init.class));
         } else if (id == R.id.nav_menus) {
-
+            // Handle the action
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_entities) {

@@ -1,23 +1,24 @@
-package wip.fhdw.caloreasy.Data;
+package wip.fhdw.caloreasy.activities.Data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
-import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 /**
  * Created by Falk on 10.01.2018.
  */
+
 @Entity(primaryKeys = {"menuID","name"}, foreignKeys = @ForeignKey(entity = Menu.class, parentColumns = "menuID", childColumns = "menuID"))
 public class Ingredient {
-    private int menuID;
+    @NonNull
+    private String menuID;
     @NonNull
     private String name;
     private String measurement;
     private int calories;
     private int amount;
 
-    public Ingredient(int menuID, @NonNull String name, String measurement, int calories, int amount) {
+    public Ingredient(String menuID, @NonNull String name, String measurement, int calories, int amount) {
         this.menuID = menuID;
         this.name = name;
         this.measurement = measurement;
@@ -25,11 +26,11 @@ public class Ingredient {
         this.amount = amount;
     }
 
-    public int getMenuID() {
+    public String getMenuID() {
         return menuID;
     }
 
-    public void setMenuID(int menuID) {
+    public void setMenuID(String menuID) {
         this.menuID = menuID;
     }
 

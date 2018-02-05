@@ -1,11 +1,10 @@
-package wip.fhdw.caloreasy.Data;
+package wip.fhdw.caloreasy.activities.Data;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
-
-import java.util.List;
+import android.database.Cursor;
 
 /**
  * Created by Falk on 10.01.2018.
@@ -13,7 +12,7 @@ import java.util.List;
 @Dao
 public interface GroceryDAO {
     @Query("SELECT * FROM Grocery")
-    List<Grocery> getAll();
+    Cursor getAll();
 
     @Query("SELECT * FROM Grocery WHERE name=:name")
     Grocery findByName(String name);

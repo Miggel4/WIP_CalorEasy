@@ -1,4 +1,4 @@
-package wip.fhdw.caloreasy.Data;
+package wip.fhdw.caloreasy.activities.Data;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -8,12 +8,12 @@ import android.content.Context;
 /**
  * Created by Falk on 10.01.2018.
  */
-@Database(entities = {Measurement.class,Menu.class, Diary.class, Grocery.class, Relation.class, Ingredient.class}, version = 1)
+@Database(entities = {Measurement.class,Menu.class, Diary.class, Grocery.class, Relation.class, Ingredient.class}, version = 2)
 public abstract class CaloreasyDatabase extends RoomDatabase{
     public static final String DB_Name = "CaloreasyDatabase";
     private static volatile CaloreasyDatabase instance;
 
-    static synchronized CaloreasyDatabase getInstance(Context context) {
+    public static synchronized CaloreasyDatabase getInstance(Context context) {
         if (instance == null) {
             instance = create(context);
             populateWithTestData(instance);
@@ -21,15 +21,17 @@ public abstract class CaloreasyDatabase extends RoomDatabase{
         return instance;
     }
 
-    private static CaloreasyDatabase create(final Context context) {
+    public static CaloreasyDatabase create(final Context context) {
         return Room.databaseBuilder(
                 context,
                 CaloreasyDatabase.class,
-                DB_Name).build();
+                DB_Name)
+                .allowMainThreadQueries()
+                .build();
     }
 
-    private static void populateWithTestData(CaloreasyDatabase db){
-        Diary diary = new Diary(1,"03.02.2018","11:22","Pizza",100, 200, "gramm");
+    public static void populateWithTestData(CaloreasyDatabase db){
+        Diary diary = new Diary("1","03.02.2018","11:22","Pizza",100, 200, "gramm");
         db.diaryDAO().addDiaryEntry(diary);
         Grocery grocery = new Grocery("Zucker", "gramm",20,100);
         db.groceryDAO().addItem(grocery);
