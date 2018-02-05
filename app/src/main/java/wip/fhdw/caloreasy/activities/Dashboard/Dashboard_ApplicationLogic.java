@@ -34,8 +34,8 @@ public class Dashboard_ApplicationLogic {
                 mActivity, mGui.getmDrawer(), mGui.getmToolbar(), R.string.navigation_drawer_open, R.string.navigation_drawer_close){
 
             /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
+            public void onDrawerStateChanged(int newState) {
+                super.onDrawerStateChanged(newState);
 
                 //Update Name in nav header according to shared Preference
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mActivity);

@@ -21,7 +21,7 @@ public class Menu_Edit_Init extends AppCompatActivity {
 
         initGUI();
         initApplicationLogic();
-        initData();
+        initData(savedInstanceState);
 
     }
 
@@ -29,9 +29,8 @@ public class Menu_Edit_Init extends AppCompatActivity {
 
     private void initApplicationLogic () {mApplicationLogic = new Menu_Edit_ApplicationLogic(mGui,this);}
 
-    private void initData () {}
+    private void initData (Bundle savedInstanceState) {mData = new Menu_Edit_Data(savedInstanceState,this);}
 
-    private void initClickListener () {}
 
 
 }
