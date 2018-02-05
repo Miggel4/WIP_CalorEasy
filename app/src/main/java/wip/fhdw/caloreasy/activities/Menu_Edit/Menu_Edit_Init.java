@@ -19,15 +19,15 @@ public class Menu_Edit_Init extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initData(savedInstanceState);
         initGUI();
         initApplicationLogic();
-        initData(savedInstanceState);
 
     }
 
     private void initGUI () {mGui = new Menu_Edit_Gui(this);}
 
-    private void initApplicationLogic () {mApplicationLogic = new Menu_Edit_ApplicationLogic(mGui,this);}
+    private void initApplicationLogic () {mApplicationLogic = new Menu_Edit_ApplicationLogic(mData, mGui,this);}
 
     private void initData (Bundle savedInstanceState) {mData = new Menu_Edit_Data(savedInstanceState,this);}
 

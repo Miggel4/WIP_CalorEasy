@@ -14,12 +14,27 @@ import static android.support.v4.content.ContextCompat.startActivity;
 public class Menu_Edit_ApplicationLogic {
 
     Menu_Edit_Gui mGui;
+    Menu_Edit_Data mData;
+    IngredientsAdapter mIngredientsAdapter;
     AppCompatActivity mActivity;
 
-    public Menu_Edit_ApplicationLogic(Menu_Edit_Gui gui, AppCompatActivity activity) {
+    public Menu_Edit_ApplicationLogic(Menu_Edit_Data data, Menu_Edit_Gui gui, AppCompatActivity activity) {
         mGui = gui;
         mActivity = activity;
+        mData = data;
+        initGui();
         initClickListener();
+
+        Ingredient in = new Ingredient("Öl","g", 3);
+        mData.addValueToList(in);
+
+    }
+
+    private void initGui(){
+        // Create the adapter to convert the array to views
+        mIngredientsAdapter = new IngredientsAdapter(mActivity, mData.getmIngredients());
+        // Attach the adapter to the ListView
+        mGui.getmListView().setAdapter(mIngredientsAdapter);
     }
 
     private void initClickListener() {

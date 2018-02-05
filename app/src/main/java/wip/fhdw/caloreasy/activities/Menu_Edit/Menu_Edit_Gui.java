@@ -26,7 +26,7 @@ public class Menu_Edit_Gui {
         mListView = (ListView) activity.findViewById(R.id.menu_edit_list_ingredients);
 
         setCustomActionBar(activity);
-        setListViewFooter(activity);
+        //setListViewFooter(activity);
     }
 
     //setup custom app bar "Abbrechen" "Speichern"

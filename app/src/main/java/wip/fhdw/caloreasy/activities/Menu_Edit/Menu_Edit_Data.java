@@ -2,10 +2,10 @@ package wip.fhdw.caloreasy.activities.Menu_Edit;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.util.Log;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+
 import wip.fhdw.caloreasy.datastructures.Constants;
 
 /**
@@ -16,17 +16,18 @@ public class Menu_Edit_Data {
 
     private Menu_Edit_Init mActivity;
     private String mName;
-
+    private ArrayList<Ingredient> mIngredients;
 
     public Menu_Edit_Data(Bundle savedInstanceState, Menu_Edit_Init init){
         mActivity = init;
-
+        mIngredients = new ArrayList<Ingredient>();
+/*
         if ( savedInstanceState == null ) {
             readIntentParametersOrSetDefaultValues(mActivity.getIntent());
         }
         else { // restore last state
             restoreDataFromBundle(savedInstanceState);
-        }
+        }*/
 
     }
 
@@ -53,8 +54,12 @@ public class Menu_Edit_Data {
         mName = b.getString(Constants.KEYMENUEDITNAME);
     }
 
-    public void saveValueInStorage(long value) {
-        Log.d("LOGTAG", "saveValueInStorage ...");
-        //tbd in database
+    public void addValueToList(Ingredient ingredient) {
+        Log.d("LOGTAG", "addValueToList ...");
+        mIngredients.add(ingredient);
+    }
+
+    public ArrayList<Ingredient> getmIngredients(){
+        return this.mIngredients;
     }
 }
