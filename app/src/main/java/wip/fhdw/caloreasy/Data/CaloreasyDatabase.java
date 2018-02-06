@@ -29,14 +29,14 @@ public abstract class CaloreasyDatabase extends RoomDatabase{
     }
 
     private static void populateWithTestData(CaloreasyDatabase db){
+        Measurement measurement = new Measurement("gramm","g");        
+        db.measurementDAO().insertItem(measurement);
+        Grocery grocery = new Grocery("Zucker", "gramm",20,100);        
+        db.groceryDAO().addItem(grocery);        
+        Menu menu = new Menu("1","Pizza");        
+        db.menuDAO().addMenu(menu);        
         Diary diary = new Diary(1,"03.02.2018","11:22","Pizza",100, 200, "gramm");
         db.diaryDAO().addDiaryEntry(diary);
-        Grocery grocery = new Grocery("Zucker", "gramm",20,100);
-        db.groceryDAO().addItem(grocery);
-        Measurement measurement = new Measurement("gramm","g");
-        db.measurementDAO().insertItem(measurement);
-        Menu menu = new Menu("1","Pizza");
-        db.menuDAO().addMenu(menu);
         Relation relation = new Relation("Zucker","gramm",100);
         db.relationDAO().addRelation(relation);
     }
